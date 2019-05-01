@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+    <title>Neo-noir</title>
+</head>
+<body onload="startMusic()">
+
+    <iframe src="./audio/silence.mp3" allow="autoplay" style="display:none"></iframe>
+
+    <audio id="audio" autoplay loop>
+        <source src="" type="audio/mp3" />
+        Your browser does not support HTML5 audio.
+    </audio>
+
+    <div id="mainBox">
+        <div id="menuText">
+            <p id="textIntro"></p>
+        </div>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="200px" height="80px" xml:space="preserve">
+            <defs>
+
+                <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+                    <path fill="#d64acf" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+                </pattern>
+
+                <pattern id="water2" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+                    <path fill="#45E7FD" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+                </pattern>
+
+                <text id="text" transform="translate(0,60)" font-family="'Cabin Condensed'" font-size="60">Neo-noir</text>
+                
+                <mask id="text-mask">
+                    <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"/>
+                </mask>
+                
+                <g id="eff">
+                    <use x="0" y="0" xlink:href="#text" fill="#a2a3a5"/>
+
+                    <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="-300" y="30" width="1200" height="120" opacity="0.3">
+                        <animate attributeType="xml" attributeName="x" from="-300" to="0" repeatCount="indefinite" dur="2s"/>
+                    </rect>
+
+                    <rect class="water-fill" mask="url(#text-mask)" fill="url(#water2)" y="27" width="1600" height="120" opacity="0.3">
+                        <animate attributeType="xml" attributeName="x" from="-400" to="0" repeatCount="indefinite" dur="3s"/>
+                    </rect>
+                    
+                    <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" y="13" width="800" height="120" opacity="0.3">
+                        <animate attributeType="xml" attributeName="x" from="-200" to="0" repeatCount="indefinite" dur="1.4s"/>
+                    </rect>
+
+                    <rect class="water-fill" mask="url(#text-mask)" fill="url(#water2)" y="24" width="2000" height="120" opacity="0.3">
+                        <animate attributeType="xml" attributeName="x" from="-500" to="0" repeatCount="indefinite" dur="3.7s"/>
+                    </rect>
+                </g>
+            </defs>
+            <use xlink:href="#eff" opacity="0.9" style="mix-blend-mode: color-dodge;"/>
+        </svg>           
+        <div id="textBox">
+            <p id="texts"></p>
+        </div>
+        <div id="dialogueBox">
+            <div id="choices"></div>
+        </div>
+        <h2 id="endText">Thanks for playing Neo-noir !</h2>
+        <p id="endStats"></p>
+        <div id="buttonBox">
+            <a href="#" class="myButton" id="startButton">Play game</a>
+            <a href="#" class="myButton" id="newGame">New game</a>
+            <a href="#" class="myButton" id="startAgain">Start again!</a>
+        </div>
+    </div>
+    <div id="skipButtonBox">
+        <a href="#" class="myButton" id="skipButton">Skip intro</a>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

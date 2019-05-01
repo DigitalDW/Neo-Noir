@@ -1,0 +1,186 @@
+body{
+    height: 100%;
+    background-color: rgb(23, 26, 34);
+}
+
+html {
+    height: 25%;
+    width: 50%;
+    background-color: rgb(23, 26, 34);
+    display: block;
+    margin: 0 auto;
+    font-family: 'Cabin Condensed';
+    color: white;
+}
+
+#mainBox{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    border: 2px #ff00ff solid;
+    border-radius: 25px;
+    box-shadow:
+        inset 0 0 50px 20px #d64acf,
+        0 0 50px 20px #d64acf;
+}
+
+#textBox{
+    display: none;
+    width: 90%;
+    height: 40%;
+    margin: 0 auto;
+    position: relative;
+    top: 2%;
+    border: 2px #45E7FD solid;
+    border-radius: 25px;
+    box-shadow: 
+        inset 0 0 50px 10px rgb(63, 210, 230),
+        0 0 50px 10px rgb(63, 210, 230);
+    z-index: 1;
+    font-size: large;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: hidden;
+}
+
+#dialogueBox{
+    display: none;
+    width: 90%;
+    height: 30%;
+    margin:0 auto;
+    position: relative;
+    top: 7%;
+    border: 2px #45E7FD solid;
+    border-radius: 25px;
+    box-shadow:
+        inset 0 0 50px 10px rgb(63, 210, 230),
+        0 0 50px 10px rgb(63, 210, 230);
+    z-index: 1;
+}
+
+svg{
+    display: none;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.myButton{
+    display: none;
+    padding:0.5em 3em;
+    width: 50%;
+    border:0.16em solid #FFFFFF;
+    /*margin:0 0.3em 0.3em 0;*/
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.myButton:hover{
+    color:rgb(240, 199, 238);
+    border-color:rgb(216, 216, 216);
+}
+    
+.myButton:active{
+    color:rgb(190, 232, 238);
+    border-color:rgb(216, 216, 216);
+}
+
+#startButton{
+    display: none;
+    text-align: center;
+}
+
+#skipButton{
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#menuText{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    overflow-y: hidden;
+    position: relative;
+    top:33%
+}
+
+.word {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 1s linear;
+}
+
+.highlight1{
+    color: #cf1db5;
+}
+
+.highlight2{
+    color: #1bb7cc;
+}
+
+.choice{
+    display: block;
+    width: 80%;
+    height: 25%;
+    margin: 0.3% auto;
+    border: 1px #45E7FD solid;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow:
+        inset 0 0 50px 10px rgb(63, 210, 230),
+        0 0 50px 10px rgb(63, 210, 230);
+    z-index: 2;
+}
+
+.choice:hover{
+    border: 1px #cf1db5 solid;
+    border-radius: 25px;
+    box-shadow:
+        inset 0 0 50px 10px #cf1db5,
+        0 0 50px 10px #cf1db5;
+}
+
+.choiceText{
+    position: relative;
+    bottom: 10%;
+}
+
+#texts{
+    display: none;
+    margin: 5%;
+}
+
+#choices{
+    display: none;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 15%;
+}
+
+#newGame{
+    margin-top: 1%;
+}
+
+#endText{
+    display: none;
+    width: 80%;
+}
+
+#endStats{
+    display: none;
+    width: 80%;
+}
